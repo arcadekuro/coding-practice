@@ -11,18 +11,21 @@ def roll(sides=6):
     return num_rolled
 
 
-def main():
-    sides = 6
-    rolling = True
-    while rolling:
-        roll_again = input("Ready to roll? ENTER=Roll. Q=Quit. ")
-        if roll_again.lower() != "q":
-            num_rolled = roll(sides)
-            print("You rolled a", num_rolled)
-        else:
-            rolling = False
+def is_six_or_three(num_rolled):
+    if num_rolled == 6 or num_rolled == 3:
+        print("You lose!")
 
-    print("Thanks for playing!")
+
+def is_ten(num_rolled1, num_rolled2):
+    if num_rolled1 + num_rolled2 == 10:
+        print("You win!")
+
+
+def main():
+    num_rolled1 = roll(6)
+    num_rolled2 = roll(6)
+    print("You rolled a", num_rolled1, num_rolled2)
+    is_ten(num_rolled1, num_rolled2)
 
 
 main()
