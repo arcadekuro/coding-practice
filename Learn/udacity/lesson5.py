@@ -25,7 +25,7 @@ The below output will give True but printing the variable itself
 will give an error.
 the code only needs to evaluate the first operand.
 """
-print(True or this_is_an_error)
+# print(True or this_is_an_error)
 
 """
 Define a procedure, biggest, that takes three
@@ -42,11 +42,12 @@ def biggest(a, b, c):
         return
 """
 
+
 def biggest(a, b, c):
     if a > b:
         if a > c:
             return a
-        else: 
+        else:
             return c
     else:
         if b > c:
@@ -72,19 +73,3 @@ print(bigger(10, 20))
 
 
 print(the_biggest(3, 6, 9))
-
-
-# >>> 9
-
-# print biggest(6, 9, 3)
-# >>> 9
-
-# print biggest(9, 3, 6)
-# >>> 9
-
-# print biggest(3, 3, 9)
-# >>> 9
-
-# print biggest(9, 3, 9)
-# >>> 9
-
