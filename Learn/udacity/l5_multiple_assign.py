@@ -9,7 +9,7 @@ def get_next_target(page):
 # In order to get 2 values returned by the get_next_target function.
 # We need two variables, on the left side and procedure call on the right.
 
-url, endpos = get_next_target(page) 
+url, endpos = get_next_target(page)
 
 """ Modify the get_next_target procedure so that
 if there is a link it behaves as before, but
@@ -32,4 +32,21 @@ def get_target_next(page):
      start_quote = page.find('"', start_link)
      end_quote = page.find('"', start_link) + 1)
      url = [start_quote + 1 : end_quote]
+     
      return url, end_quote
+
+def print_all_links(page):
+    while url True:
+        url, endpos = get_next_targe(page)
+        if url:
+            print url
+            page = page[endpos:]
+            else:
+                break
+
+
+""" The below code gets all the links on a page.
+Two functions are called. The get_page function is from a later lesson.
+
+"""
+print print_all_links(get_page('http'://xkcd.com/353'))
