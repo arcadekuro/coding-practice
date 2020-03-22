@@ -57,7 +57,7 @@ print_numbers(3)
 # Another method is:
 
 
-def print_numbers(n):
+def print_numbers2(n):
     i = 1
     while i <= n:
         print(i)
