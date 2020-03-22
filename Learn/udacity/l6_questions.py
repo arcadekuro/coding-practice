@@ -74,4 +74,19 @@ print(median(1,2,3))
 #print(median(7,8,7))
 #>>> 7
 
+"""
+Define a procedure, countdown, 
+that takes a positive whole number as its input, 
+and prints out a coundown from that number to 1, followeed by Blast off!
+This tests loops
+"""
 
+def countdown(n):
+    while n > 0: # Define how long we cout down for 
+        print(n)
+        n = n - 1
+        # What do we do after every count
+    else: 
+        return print('Blastoff!')
+
+countdown(3)
