@@ -1,38 +1,92 @@
 <!DOCTYPE html>
-<!--
+
+<html>
+    <!--
     <h1> Hello world</h1> 
     A better way to apply syles of an element is to use CSS. 
     This can be done by using a style block.
--->
-<style>
-    p {
-        color: black;
-        font-weight: 500;
-    }
 
-</style>
+    Other than standard fonts, you can also specify  non-standard, 
+    custom web fonts from google fonts. 
+    To import a Google Font, you can copy the font(s) URL from the Google Fonts library and then paste it in your HTML. To this ceate a link element with the href linking to the webpage.(before the style element)
+    -->
 
-<html>
+    <!-- There are several default fonts that are available in all browsers. These  generic font families include monospace, serif and sans-serif
+    When one font isn't available, you can tell the browser to "degrade" to another font.  Generic font family names are not case-sensitive. Also, they do not need quotes   because they are CSS keywords.
+
+    if it's a class element use a dot in front. i.e .smaller-image
+
+    border radius gives a rounded corner. 50% - makes it circular
+
+    in addition to classes, each HTML elemt can also have an id attibute.
+     id to style a single element and later you'll learn that you can use them to select and modify specific elements with JavaScript. They should be unique. Don't give more than one element the same id attribute.
+    -->
     <head>
+        <meta charset="utf-8">
         <title>The Cat Photo App</title>
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     </head>
 
+<style>
+p {
+    color: black;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+blue-text {
+    color: blue;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+}
+
+.thick-green-border {
+    border-color: lightblue;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%; 
+}
+
+.smaller-image{ 
+    width: 100px;
+    }
+
+.green-background {
+    background-color: aquamarine;
+}
+
+</style>
+<!-- 
+classes are reusable tyles that can be added to HTML elemnts.
+The same class can be used on multiple elements.
+
+CSS borders have properties like style, color and width.
+you can apply multiple classes to an element using its class attribute, by separating each class name with a space. For example:
+
+<img class="class1 class2">
+
+you can also size your images using the CCS property called width.
+-->
+    
 <body> 
     <main>
         <!--You can change the colour using style attribute in an individual html element-->
         <h2 style="color: blue;">CatPhotoApp</h2>
-         <a href="#footer" id="footer">Jump to bottom</a>
-        <a href="#"></a><img src="https://bit.ly/fcc-relaxing-cat" alt="cat"></a>
+         <a href="#footer" id="footer" >Jump to bottom</a>
+        <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="cat" ></a>
         
         <p>
         View more <a href="http://freecatphotoapp.com">Cat photos</a>
         </p>
-        <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff </p>
+        <p class="blue-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff </p>
 
         <!-- 
             Sometimes you want to add a elements to your website before you know where they will link. This is also handy when you're changing the behavior of a link using JavaScript. You can do this by making a href attribute value with href="#"
         -->
-        <div>
+        <div class="green-background">
             <p>Things cats loves:</p>
             <ul>
                 <li>Yarn</li>
@@ -55,7 +109,7 @@
             you can also create a form that has the input nested undearneath.
             Placeholder text is what is displayed in your input element before your user has inputed anything using placeholder="this is placeholder text">
         -->
-        <form action="/submit-cat-photo">
+        <form action="/submit-cat-photo" id="cat-photo-form">
             <label>
                 <input type="radio" value="Indoor" name="indoor-outdoor" checked> Indoor
             </label>
