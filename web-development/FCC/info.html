@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    <html> 
+<!-- Adusting the padding of an element
+    All HTML elements are rectangles. and thre properties control the space that surrounds each HTML element: padding, margin, and border.\
+
+    Padding controls the amount of space between the elements content and it's border.
+    An element's margin controls the amount of space between an element's border and surrounding elements.
+
+    If you set an element's margin to a negative value, the element will grow larger.
+
+    You can also change the padding on each side using padding-right/top/bottom/left
+
+    nstead of specifying an element's padding-top, padding-right, padding-bottom, and padding-left properties individually, you can specify them all in one line, like this:
+
+    padding: 10px 20px 10px 20px;
+
+    These four values work like a clock: top, right, bottom, left, and will produce the exact same result as using the side-specific padding instructions.
+    This can also be done for margin.
+
+    There are different units of length other than px. Absolute (in, mm) and relative(em, rem - relative to anothe legth value)
+-->
+    <title></title>
+     <!-- sometimes our HTML elements will receive multiple styles that conflict with one another.
+
+    For example, your h1 element can't be both green and pink at the same time. classes will overide styles set to html elements. 
+
+    If two classes are given, the browser reads top to bottom and use whicever CSS decleration  comes last. Like in python.
+
+    you can also overide your css class by adding an id.
+
+    <style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  .pink-text {
+    color: pink;
+  }
+  .blue-text {
+    color: blue;
+  }
+</style>
+<h1 class="pink-text blue-text">Hello World!</h1>
+
+-->
+
+        <head>
+            <style>
+                injected-text {
+    margin-bottom: -25px;
+    text-align: center;
+  }
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+
+  .yellow-box {
+    background-color: yellow;
+    padding: 10px;
+  }
+
+  .red-box {
+    background-color: crimson;
+    color: #fff;
+    margin: -15px;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+  }
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    margin: -15px;
+    padding: 10px 20px 10px 20px;
+  }
+
+ 
+            </style>
+        </head>
+<!--The Main tag is new in HTML5 and its used to indcate the main unique content of the document and will be inside of the body tags. but seperate from common content such as displayed menus/headers or footers.-->
+        <body>
+            <main>
+                <h5 class="injected-text">margin</h5>
+                <div class="box yellow-box">
+                    <h5 class="box red-box">padding</h5>
+                    <h5 class="box blue-box">padding</h5>
+                </div>
+            </main>
+        </body>
+
+
+</html>
