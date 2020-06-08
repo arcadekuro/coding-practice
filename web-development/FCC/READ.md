@@ -31,9 +31,12 @@ Front end libraries Certification ( 300 hours)
 
 
 # Learning
+
 The information below is provided in the Free Code Camp tutorials. This is just for my own reference in the case I want to look back.
 
 # HTML
+=======
+
 ## Input Elements
  Input elements are convenient way to get input from your user.
  `<input type="text">`
@@ -51,6 +54,7 @@ If you omit the value attribute, the submitted form data uses the default value,
 
 You can set a checkbox or radio button to be checked by default using thechecked attribute.
 `<input type="radio" name="test-name" checked>`
+
 
 # CSS
 
@@ -101,15 +105,19 @@ can be shortened to #F00.
 
 This reduces the total number of possible colors to around 4,000. But browsers will interpret #FF0000 and #F00 as exactly the same color.
 
-| Colour  | Short Hex code |
+
+
+| Color  | Short Hex code |
 | ------ |:--------------:|
 | Cyan   | #0FF           |
 | Green  | #0F0           |
 | Red    | #F00           |
 | Fuchsia| #F0F           |
 
+
 ### Using RGB values
 Another way you can represent colors in CSS is by using RGB values.
+
 
 The RGB value for black looks like this:
 
@@ -124,6 +132,7 @@ Instead of using six hexadecimal digits like you do with hex code, with RGB you 
 `body {
   background-color: rgb(255, 165, 0);
 }`
+
 
 ### Using RGB to mix colours
 Just like with hex code, you can mix colors in RGB by using combinations of different values.
